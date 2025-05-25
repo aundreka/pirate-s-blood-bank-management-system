@@ -1,0 +1,18 @@
+
+fix thank-you.php layout top is cut
+
+to do
+    improve community.php layout, allow a user to select events and go to the events section right away. make tha layout look more professional. right now the events are all ligned to the left it looks misaligned. create and redirect to register.php after clicking on register to this event then in register.php show the specific event details, like the place time etc. upon registration, give the user a thankyou message, and a ticket at the top of the page. 
+    create an events.php file to show all events. make it a calendar format and mark the dates that have an events. when clicked on, redirect to register.php with the event details.
+    search.php 
+profile.php 
+settings.php
+
+ADMIN
+index.php
+users.php
+FIX donations.php layout 
+requests.php
+logs.php
+statistics.php
+events.php

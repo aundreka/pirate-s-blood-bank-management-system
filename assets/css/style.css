@@ -1,0 +1,522 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fbfbfb;
+}
+main {
+    display: flex;
+    min-height: 100vh; /* Changed from height: 100vh */
+    overflow: hidden;
+    position: relative;
+}
+
+
+h1 {
+  font-family: "Cardo", serif;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+h2 {
+  font-family: "Garet", sans-serif;
+  font-size: 2rem;
+  color: #333;
+}
+
+
+
+/* LOGIN */
+
+
+.slideshow {
+  width: 50%;
+  background: #d80027;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.caption {
+font-family: "quicksand", sans-serif;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.login-form {
+  width: 55%;
+  padding: 60px 250px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: opacity 0.8s ease;
+  
+}
+.login-form img,
+.signup img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1/1; /* Maintains square aspect ratio */
+}
+.login-form img{
+    width: 300px;
+    height: 300px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: "quicksand", sans-serif;
+}
+
+.login-form input {
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+input[type="text"], input[type="password"] {
+  font-family: "quicksand", sans-serif;
+  background: #ededed;
+  border: none;
+}
+
+button[type="submit"] {
+  background-color: #d41b22;
+  color: white;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: 'quicksand', sans-serif;
+}
+
+button[type="submit"]:hover {
+  background-color: #ff3131;
+}
+
+.forgot-password {
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.forgot-password a {
+  text-decoration: none;
+  color: #ff3131;
+
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+  color: #ff3131;
+}
+
+.action {
+  text-align: center;
+  margin-top: 10px;
+  color: #919191;
+}
+
+.action a {
+  text-decoration: none;
+  color: #ff3131;
+  font-weight: 800;
+}
+
+.action a:hover {
+  text-decoration: underline;
+}
+
+.login-form h1 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* SIGNUP */
+
+.signup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 100px;
+}
+
+.signup img{
+    width: 300px;
+    height: 300px;
+}
+
+.signup form {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    font-family: "quicksand", sans-serif;
+    gap: 15px;
+}
+
+.signup form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.signup form select {
+  width: 100%;
+  max-width: 800px;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-family: 'quicksand', sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: white;
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%22292%22%20height%3D%22292%22%20viewBox%3D%220%200%20292%20292%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M287%2069.4c5.2-5.2%205.2-13.6%200-18.8l-22.6-22.6c-5.2-5.2-13.6-5.2-18.8%200L146%20128.6%2046.4%2028.1c-5.2-5.2-13.6-5.2-18.8%200L5%2050.7c-5.2%205.2-5.2%2013.6%200%2018.8l128%20128c5.2%205.2%2013.6%205.2%2018.8%200l135.2-135.1z%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem top 50%;
+  background-size: 1rem;
+}
+
+.signup form select:hover,
+.signup form select:focus {
+  border: #000000 2px solid;
+  outline: none;
+}
+
+.signup form option {
+  font-size: 1rem;
+  padding: 10px;
+  color: #333;
+  background-color: white;
+}
+
+
+/* FORGOT */
+.forgot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 100px;
+}
+
+.forgot h2{
+  margin-bottom: 20px;
+}
+
+.forgot form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    font-family: "quicksand", sans-serif;
+    gap: 15px;
+}
+
+.forgot form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.forgot form select {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-family: 'quicksand', sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: white;
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%22292%22%20height%3D%22292%22%20viewBox%3D%220%200%20292%20292%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M287%2069.4c5.2-5.2%205.2-13.6%200-18.8l-22.6-22.6c-5.2-5.2-13.6-5.2-18.8%200L146%20128.6%2046.4%2028.1c-5.2-5.2-13.6-5.2-18.8%200L5%2050.7c-5.2%205.2-5.2%2013.6%200%2018.8l128%20128c5.2%205.2%2013.6%205.2%2018.8%200l135.2-135.1z%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem top 50%;
+  background-size: 1rem;
+}
+
+.forgot form select:hover,
+.forgot form select:focus {
+  border: #000000 2px solid;
+  outline: none;
+}
+
+.forgot form option {
+  font-size: 1rem;
+  padding: 10px;
+  color: #333;
+  background-color: white;
+}
+
+.forgot button[type="submit"], signup button[type="submit"], login-form button[type="submit"] {
+ margin-bottom: 40px;
+}
+.forgot p{
+  width: 590px;
+  text-align: left;
+}
+
+/* Mobile landscape and below */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+        align-items: center; /* Center the login form */
+    }
+    
+    h1 {
+        font-size: 2rem;
+        
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* LOGIN MOBILE */
+    .slideshow {
+        width: 100%;
+        height: 25vh; /* Made smaller - was 40vh */
+        max-height: 100px; /* Reduced from 250px */
+    }
+    
+    .slides img {
+        height: 25vh; /* Made smaller - was 40vh */
+        min-height: 180px; /* Reduced from 250px */
+    }
+    
+    .slideshow .caption {
+        font-size: 1rem; /* Smaller text */
+        bottom: 15px; /* Reduced spacing */
+        left: 20px;
+        right: 20px;
+        text-align: center;
+    }
+    
+    .login-form {
+        width: 100%;
+        max-width: 400px; /* Limit width for better centering */
+        padding: 40px 30px; /* Increased top/bottom padding */
+        margin: 0 auto; /* Center horizontally */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Center content */
+        min-height: 75vh; /* Takes remaining space */
+    }
+    
+    .login-form img {
+        width: 180px; /* Slightly smaller */
+        height: 180px;
+    }
+    
+    .login-form h1 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        text-align: center;
+        
+    }
+    
+    .login-form form {
+        gap: 12px;
+        width: 100%;
+        max-width: 300px; /* Constrain form width */
+    }
+    
+    .login-form input,
+    button[type="submit"] {
+        padding: 14px;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+    /* LOGIN SMALL MOBILE */
+    .slideshow {
+        height: 20vh; /* Even smaller */
+        min-height: 150px;
+    }
+    
+    .slides img {
+        height: 20vh; /* Even smaller */
+        min-height: 150px;
+    }
+    
+    .slideshow .caption {
+        font-size: 0.9rem;
+        bottom: 10px;
+        left: 15px;
+        right: 15px;
+    }
+    
+    .login-form {
+        padding: 30px 25px;
+        min-height: 80vh; /* More space for login */
+        max-width: 350px;
+    }
+    
+    .login-form img {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .login-form h1 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .login-form form {
+        max-width: 280px;
+    }
+    
+    .login-form input,
+    button[type="submit"] {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+    
+    .forgot-password {
+        font-size: 0.75rem;
+    }
+    
+    .action {
+        font-size: 0.85rem;
+        margin-top: 15px;
+    }
+}
+
+/* Very small mobile */
+@media (max-width: 360px) {
+    .slideshow {
+        height: 18vh; /* Very small slideshow */
+        min-height: 120px;
+    }
+    
+    .slides img {
+        height: 18vh;
+        min-height: 120px;
+    }
+    
+    .slideshow .caption {
+        font-size: 0.8rem;
+        bottom: 8px;
+        left: 10px;
+        right: 10px;
+    }
+    
+    .login-form {
+        padding: 20px;
+        min-height: 82vh; /* Most space for login */
+        max-width: 320px;
+    }
+    
+    .login-form img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .login-form form {
+        max-width: 260px;
+    }
+    
+    .login-form input,
+    button[type="submit"] {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Landscape orientation for mobile devices */
+@media (max-width: 768px) and (orientation: landscape) {
+    main {
+        flex-direction: row; /* Side by side in landscape */
+        height: 100vh;
+    }
+    
+    .slideshow {
+        width: 35%; /* Smaller portion of screen */
+        height: 100vh;
+        min-height: auto;
+    }
+    
+    .slides img {
+        height: 100vh;
+        min-height: auto;
+    }
+    
+    .slideshow .caption {
+        font-size: 0.9rem;
+        bottom: 20px;
+        left: 15px;
+        right: 15px;
+    }
+    
+    .login-form {
+        width: 65%; /* Larger portion for login */
+        height: 100vh;
+        min-height: auto;
+        padding: 20px 30px;
+        max-width: none;
+    }
+    
+    .login-form img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .login-form form {
+        max-width: 280px;
+    }
+}
