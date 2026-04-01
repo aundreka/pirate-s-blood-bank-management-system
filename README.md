@@ -1,4 +1,3 @@
-Here is a clean, **plain and copy-pasteable `README.md`** without emojis:
 
 ---
 
@@ -162,4 +161,3 @@ This project is developed for academic purposes. Usage and modification are allo
 
 ---
 
-If you want, I can also make a **GitHub-optimized version (with badges and sections like screenshots/demo)** or a **short one-page version for submission**.
